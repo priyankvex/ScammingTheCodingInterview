@@ -3,7 +3,7 @@
 <head>
 	<meta class="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Page | Evie by unDraw</title>
+	<title>Scamming the Coding Interview | Problem 001</title>
 	<link rel='stylesheet' href='../css/style.min.css' />
 </head>
 <body>
@@ -12,7 +12,7 @@
 		<nav class="nav__mobile"></nav>
 		<div class="container">
 			<div class="navbar__inner">
-				<a href="#" class="navbar__logo">Logo</a>
+				<a href="http://scammingthecodinginterview.com" class="navbar__logo">scammingthecodinginterview.com</a>
 				<nav class="navbar__menu">
 					<ul>
 						<li><a href="http://priyankvex.com">Blog</a></li>
@@ -31,7 +31,6 @@
 				<div class="page__header__content">
 					<div class="page__header__content__inner" id='navConverter'>
 						<h1 class="page__header__title">Problem 001</h1>
-						<p class="page__header__text" style="text-align: center;">This is mostly a simple layout, rather than a complete page unlike the others. However this is a really useful starting point for anything you want to create.</p>
 					</div>
 				</div>
 			</div>
@@ -39,12 +38,48 @@
 	</div>
 	<!-- Page content -->
 	<div class="page">
-		<div class="container" >
+		<div class="container" style="width: 60%; text-align: center;margin: 0 auto;" >
 			
 				<div class="page__main" style="text-align: center;">
-					<div class="text-container">
-						<h3 class="page__main__title">This is the main area</h3>
-						<p>Write or do whatever you want here!</p>
+					<div>
+						<h3 class="page__main__title">
+							The power set of a set is the set of all its subsets. Write a function that, given a set, generates its power set.
+						</h3>
+
+						<br>
+						<br>
+
+						<code>
+							For example, given the set {1, 2, 3}, <br>
+							it should return {{}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}. <br>
+							You may also use a list or array to represent a set.
+						</code>
+
+						<br>
+						<br>
+
+						<h3>Solution</h3>
+
+						<code>
+
+							Generating power set of given elements can be done using recursion.
+							Basic idea is to take some elements as a prefix and then generate all the sets possible using the remaining of the elements.
+
+							Ex. For the elements {1, 2, 3}
+
+							We can fix 1 and then go on to generate the sets like:
+
+							{1},  {1, 2}, {1, 2, 3} 
+
+						</code>
+
+						<br>
+						<br>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/b9bdd16d175b33989e093660cb1f91f2.js"></script>
+						</div>
+
 					</div>
 				</div>
 
