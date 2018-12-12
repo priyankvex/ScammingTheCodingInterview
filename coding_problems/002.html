@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the Coding Interview | Problem 002</title>
+	<link rel='stylesheet' href='../css/style.min.css' />
+</head>
+<body>
+	<!-- navbar -->
+	<div class="navbar navbar--extended">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+				<a href="http://scammingthecodinginterview.com" class="navbar__logo">scammingthecodinginterview.com</a>
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Problem 002</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%; text-align: center;margin: 0 auto;" >
+			
+				<div class="page__main" style="text-align: center;">
+					<div>
+						<h3 class="page__main__title">
+							Implement a Sudoku solver
+						</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+							Sudoku is a puzzle where you're given a partially-filled 9 by 9 grid with digits. The objective is to fill the grid with the constraint that every row, column, and box (3 by 3 subgrid) must contain all of the digits from 1 to 9.
+
+Implement an efficient sudoku solver.
+						</p>
+
+						<br>
+						<br>
+
+						<h3>Solution</h3>
+
+						<p style="line-height: 45px;">
+
+							A Sudoku solver can be implemented using Backtracking.
+
+							<a href="https://en.wikipedia.org/wiki/Backtracking">
+								https://en.wikipedia.org/wiki/Backtracking
+							</a>
+
+							Like any backtracking problem, we find an empyt cell, and try all the numbers that can eventually lead to a completely solved board.
+							If the completely solved configuration cannot be reached, we backtrack and try a different number.
+
+							If no such number is possible for the cell, we return False.
+
+							This can be implemented as follows.
+
+						</p>
+
+						<br>
+						<br>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/71e1848f205ee96b0d9ee0ccf7fc77bb.js"></script>
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
