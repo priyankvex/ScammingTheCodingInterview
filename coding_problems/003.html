@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the Coding Interview | Problem 001</title>
+	<link rel='stylesheet' href='../css/style.min.css' />
+</head>
+<body>
+	<!-- navbar -->
+	<div class="navbar navbar--extended">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+				<a href="http://scammingthecodinginterview.com" class="navbar__logo">scammingthecodinginterview.com</a>
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Problem 003</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title" style="text-align: center;margin: 0 auto;">
+							Implement a URL Shortner
+						</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+							<p>Implement a URL shortner with following functions:<br><br> 1. <strong>Shorten URL:</strong> Given a URL, returns a shortened URL.<br><br> 2.<strong> Restore URL:</strong> Given a shortened URL, returns the original URL.<br><br> <strong>Few things to consider:<br></strong> 1. What if we enter the same URL twice? Will we want the same shortened URL or a different one.</p>
+						</p>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+						
+						<p style="line-height: 45px;">
+
+							<p>A very basic approach can be, to hash the URL and take the first or last  6 characters from it.<br>Though this approach seems easy, it has a couple of pitfalls:<br><br>1. Hashes are not meant to be sliced, this can result in a very high collision rate.<br><br>2. What if we enter the same URL twice? Being a good service, we'll want it to give a different URL for each time.<br><br><br>There are many solutions possible to this problem. I would recommend watching this video too,<br>https://www.youtube.com/watch?v=fMZMm_0ZhK4.<br><br><br>A possible solution to this problem can be as follows:<br><br>1. Insert URL in the database to get an ID.<br>2. This ID will be unique to each URL generated.<br>3. Suppose our URL can be at maximum, 6 characters long, and we have characters from [a-z], [A-Z] and [0-9] i.e of 62 characters.<br>4. We can convert the database ID, to a base 62 number.<br>5. This base 62 number will be the shortened URL.<br>6. To get the original URL, we convert the base 62 number to the base 10 number.<br>7. This base 10 number will give us the database ID of the original URL, using which we can fetch the original URL.<br><br><br><strong>Let's see take an example:<br><br></strong>ID = 123456789<br>Shortened URL = "iwaUH"<br><br><br>Even this solution has a pitfall, that is that the URLs generated are sequential. <br>One way to handle that can be to first hash the URL and assign it a bucket, each bucket can maintain its own counter for the IDs.<br>(We'll skip implementing this here.)<br><br><br>Above approach can be implemented as follows:<br>  </p>
+
+						</p>
+
+						<br>
+						<br>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/b53321946cc6d7df65af23bafca75d43.js"></script>
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
