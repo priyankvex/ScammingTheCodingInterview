@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the Coding Interview | Problem 005</title>
+	<link rel='stylesheet' href='../css/style.min.css' />
+</head>
+<body>
+	<!-- navbar -->
+	<div class="navbar navbar--extended">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+				<a href="http://scammingthecodinginterview.com" class="navbar__logo">scammingthecodinginterview.com</a>
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Problem 005</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title" style="text-align: center;margin: 0 auto;">
+							Implement a file syncing algorithm for a low-bandwidth network.
+						</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+							Implement a file syncing algorithm for two computers over a low-bandwidth network. What if we know the files in the two computers are mostly the same?
+						</p>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>Since it is given that the network is of low-bandwidth and unreliable, it indicates that syncing of files as they are being edited is not possible or is error prone. We need a way to reliable and efficient way to sync the entire directory structure.</p>
+
+							<p><br>A point to note is that most of the directory structure is going to same, so we should prevent syncing the parts of the directory structure that are not changed.<br><br>We are going to use a data structure called <a href="https://en.wikipedia.org/wiki/Merkle_tree"><b>Merkle Tree</b></a> here.<br><strong>Merkel Tree</strong> is a tree in which each leaf is a hash of the data block it represents and all the parent nodes are the hashes of the collated hashes of their children.<br><br><strong>Overview</strong> <strong>of the algorithm looks as follows:</strong><br>1. Whenever a change is made a file, we calculate the hashes of the entire directory branch that file part of.<br>2. To sync the changes, we compare the Merkle Tree of both the systems.<br>3. The nodes that have the same hashes can be ignored from the syncing process as the entire directory structure below them must also be the same.<br><br><strong>The above approach can be implemented as follows:</strong><br></p>
+
+						</p>
+
+						<br>
+						<br>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/685ee934338bee9fa470da7acfcb4598.js"></script>
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
