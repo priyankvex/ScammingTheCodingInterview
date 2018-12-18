@@ -3,7 +3,7 @@
 <head>
 	<meta class="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Scamming the Coding Interview | Problem 005</title>
+	<title>Scamming the Coding Interview | Problem 006</title>
 	<link rel='stylesheet' href='../css/style.min.css' />
 </head>
 <body>
@@ -30,7 +30,7 @@
 			<div class="container">
 				<div class="page__header__content">
 					<div class="page__header__content__inner" id='navConverter'>
-						<h1 class="page__header__title">Problem 005</h1>
+						<h1 class="page__header__title">Problem 006</h1>
 					</div>
 				</div>
 			</div>
@@ -44,14 +44,16 @@
 					<div>
 						<br>
 						<h3 class="page__main__title" style="text-align: center;margin: 0 auto;">
-							Implement a file syncing algorithm for a low-bandwidth network.
+							Given a multiset of integers, return whether it can be partitioned into two subsets whose sums are the same.
 						</h3>
 
 						<br>
 						<br>
 
 						<p style="line-height: 45px;">
-							Implement a file syncing algorithm for two computers over a low-bandwidth network. What if we know the files in the two computers are mostly the same?
+							For example, given the multiset {15, 5, 20, 10, 35, 15, 10}, it would return true, since we can split it up into {15, 5, 10, 15, 10} and {20, 35}, which both add up to 55.<br><br>
+
+Given the multiset {15, 5, 20, 10, 35}, it would return false, since we can't split it up into two subsets that add up to the same sum.
 						</p>
 
 						<br>
@@ -64,17 +66,23 @@
 
 						<p style="line-height: 45px;">
 
-							<p>Since it is given that the network is of low-bandwidth and unreliable, it indicates that syncing of files as they are being edited is not possible or is error prone. We need a way to reliable and efficient way to sync the entire directory structure.</p>
+							<!-- wp:paragraph -->
+<p>The above problem can be solved using a technique called as <strong>Meet in the middle </strong>approach.</p>
+<!-- /wp:paragraph -->
 
-							<p><br>A point to note is that most of the directory structure is going to same, so we should prevent syncing the parts of the directory structure that are not changed.<br><br>We are going to use a data structure called <a href="https://en.wikipedia.org/wiki/Merkle_tree"><b>Merkle Tree</b></a> here.<br><strong>Merkel Tree</strong> is a tree in which each leaf is a hash of the data block it represents and all the parent nodes are the hashes of the collated hashes of their children.<br><br><strong>Overview</strong> <strong>of the algorithm looks as follows:</strong><br>1. Whenever a change is made a file, we calculate the hashes of the entire directory branch that file part of.<br>2. To sync the changes, we compare the Merkle Tree of both the systems.<br>3. The nodes that have the same hashes can be ignored from the syncing process as the entire directory structure below them must also be the same.<br><br><strong>The above approach can be implemented as follows:</strong><br></p>
+<!-- wp:paragraph -->
+<p>I would recommend watching this video to get an overview of the MitM technique. <a href="https://youtu.be/57SUNQL4JFA">https://youtu.be/57SUNQL4JFA</a><br><br>We need to partition the set in such a way that the 2 parts have the same sum. That means that the problem can be simplified to finding a set which has the sum equal to <strong>total_sum/2.</strong><br><br>The brute force approach would generate all the combinations of N (size of the set) and pick the 2 sets that have the sum <strong>total_sum/2.</strong><br><br> Time complexity, in this case, would be <strong>O(2^N).</strong><br><br>Using meet in the middle technique, we can reduce the time complexity to be <strong>O(2^(N/2))</strong>, which for big values of N would be a huge improvement.<br><br><strong>Overview of the algorithm looks as follows:</strong><br>1. Divide the array into 2 parts, A and B.<br>2. Generate all combinations and their sum for the set A and store that in a map. This can be done in <strong>O(2^(N/2))</strong><br>3. Generate all the combinations for the set B.<br>4. For each combination sum K for the set B, check if the sum (total_sum/2) - K is present in the map.<br>5 If yes, then we have found the solution.<br><br>The above approach can be implemented as follows.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><br><br></p>
+<!-- /wp:paragraph -->
 
 						</p>
 
-						<br>
-						<br>
 
 						<div>
-							<script src="https://gist.github.com/priyankvex/685ee934338bee9fa470da7acfcb4598.js"></script>
+							<script src="https://gist.github.com/priyankvex/3c317db81f979d4b4b7335caee125377.js"></script>
 						</div>
 
 					</div>
