@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the Coding Interview | Problem 008</title>
+	<link rel='stylesheet' href='../css/style.min.css' />
+</head>
+<body>
+	<!-- navbar -->
+	<div class="navbar navbar--extended">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+				<a href="http://scammingthecodinginterview.com" class="navbar__logo">scammingthecodinginterview.com</a>
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Problem 008</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title" style="text-align: center;margin: 0 auto;">
+							There is an N by M matrix of zeroes. Given N and M, write a function to count the number of ways of starting at the top-left corner and getting to the bottom-right corner.<br> You can only move right or down.
+							<br>
+						</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+							<p>For example, given a 2 by 2 matrix, you should return 2, since there are two ways to get to the bottom-right:</p>
+
+							<ul><li>Right, then </li><li> Down, then right.</li></ul>
+
+							<p> Given a 5 by 5 matrix, there are 70 ways to get to the bottom-right.<br></p>
+
+						</p>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>We are given a N X M grid and we have to count the total numbers of ways in which we can start from 0, 0 and reach N-1, M-1.<br><br>This can be done efficiently in <strong>O(N*M)</strong> complexity using extra space.<br><br>As it is given that we can move only right and down, numbers of ways to reach square will be : <br><br>number of ways to reach the square just above + number of ways to reach the square just to the left.<br><br><strong>The overview of the algorithm looks as follows:</strong><br>1. Create a N X M matrix.<br>2. Fill the first row and the first column with <strong>1 </strong>as there is only 1 way to reach those squares.<br>3. For the rest of the squares, keep adding the values present in the square on the top of the current square and the square at the left of the current square.<br>4. The value of the last square is the answer. <br></p>
+
+							<p><br><strong>The above approach can be implemented as follows:</strong><br><br><br></p>
+
+						</p>
+
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/b67cf0ad898dd821126a6160f8ff7642.js"></script>
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
