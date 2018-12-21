@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the Coding Interview | Problem 009</title>
+	<link rel='stylesheet' href='../css/style.min.css' />
+</head>
+<body>
+	<!-- navbar -->
+	<div class="navbar navbar--extended">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+				<a href="http://scammingthecodinginterview.com" class="navbar__logo">scammingthecodinginterview.com</a>
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Problem 009</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title">
+							Given a 2D matrix of characters and a target word, write a function that returns whether the word can be found in the matrix by going left-to-right, or up-to-down.
+							<br>
+						</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+							<p>For example, given the following matrix:</p>
+							<code>
+								[['F', 'A', 'C', 'I'], <br>
+ 								['O', 'B', 'Q', 'P'], <br>
+ 								['A', 'N', 'O', 'B'], <br>
+ 								['M', 'A', 'S', 'S']] <br>
+							</code>
+
+							<br>
+
+							The target word 'FOAM', you should return true, since it's the leftmost column. Similarly, given the target word 'MASS', you should return true, since it's the last row.
+
+						</p>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>There are a bunch of ways and optimizations that we can do to solve the problem.<br><br><strong>Brute Force:</strong><br><br>One approach that doesn't use any extra space is to search for the first character of the target word in the matrix. <br>For each occurrence found, check the row and column for the word.  <br><br>If we have to make multiple searches, each search needs an <strong>O(N*M)</strong>  to search the first character in the matrix.<br><br><br><strong>First Optimization:</strong><br><br>One optimization can be to pre-process the matrix and create a map of the characters against the list of their occurrences.<br><br>This way, we can directly start with the occurrences of the first character and avoid the matrix traversal for each search query.<br>This does require extra space though.<br><br>This is the approach that we'll with here.<br><br><br><strong>More Optimizations:</strong><br><br>Few more optimizations can be possible based on early disqualification of the first letter occurrences.<br>For example, we can check for the last character too and check if there are any first character occurrences which don't have any last character occurrences in the same row or column.<br>Another criterion can be to include the length of the word too. <br>
+
+							<p><br><strong>The above approach can be implemented as follows:</strong><br><br><br></p>
+
+						</p>
+
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/64b065b9d22df9d88804ce2375d290cc.js"></script>
+						</div>
+
+						<br>
+						<br>
+
+						<div>
+							<a href="https://scammingthecodinginterview.com" style="padding-right: 20px"><button type='submit' class="button button__accent">Subscribe here</button></a>To get a coding and design problem daily in your inbox. 
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
