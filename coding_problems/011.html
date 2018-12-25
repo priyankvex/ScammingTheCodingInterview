@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the Coding Interview | Problem 011</title>
+	<link rel='stylesheet' href='../css/style.min.css' />
+</head>
+<body>
+	<!-- navbar -->
+	<div class="navbar navbar--extended">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+				<a href="http://scammingthecodinginterview.com" class="navbar__logo">scammingthecodinginterview.com</a>
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Problem 011</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title">
+							Implement the LFU cache with constant time operations for get, set and delete
+							<br>
+						</h3>
+						 
+						<br>
+
+						<p style="line-height: 45px;">
+							<p>Implement an LFU (Least Frequently Used) cache with the following operations supported:</p>
+
+							<ul><li><code>set(key, value)</code>: sets <code>key</code> to <code>value</code>. If there are already <code>n</code> items in the cache and we are adding a new item, then it should also remove the least frequently used item. If there is a tie, then the least recently used key should be removed.</li><li><code>get(key)</code>: gets the value at <code>key</code>. If no such key exists, return null.</li><li><code>delete(key)</code>: deletes a key for the cache.</li></ul>
+
+							<p>Each operation should run in O(1) time.</p>
+
+						</p>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>In <strong>least frequently used </strong>cache, when the cache becomes full, we remove the item that has the least number of usage frequency.<br>LFU cache has many applications where a LRU cache won't give the required performance optimizations.<br>Ex. In DNS caching in the routers, we don't want the most popular DNS cache to be removed when a new entry is inserted.<br><br>If we were allowed to have an <strong>O(log N) </strong>complexity for the operations, we could've used the heap approach. But we have to provide all the operations in <strong>constant time.</strong><br><br><strong>Overview of the algorithm:</strong><br>The idea is to use some special data structures to make this possible.<br>1. A list of frequency bucket is used to maintain all the frequency count for the items in the cache.<br>2. Each item belongs to the items list of one of the frequency node which represents its usage frequency.<br>3. Whenever the cache overflows, we remove an item by going to the items list of the first frequency node (as it'll have the minimum usage frequency).<br>4. When an item is accessed, we move it to the items list of the one bigger frequency count node.<br><br>All these operations can be done in constant time.</p>
+
+							<p><br><strong>The above approach can be implemented as follows:</strong><br><br><br></p>
+
+						</p>
+
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/496576f0ee93007645eaee31a7c7333b.js"></script>
+						</div>
+
+						<br>
+						<br>
+
+						<div>
+							<a href="https://scammingthecodinginterview.com" style="padding-right: 20px"><button type='submit' class="button button__accent">Subscribe here</button></a>To get a coding and design problem daily in your inbox. 
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
