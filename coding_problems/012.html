@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the Coding Interview | Problem 012</title>
+	<link rel='stylesheet' href='../css/style.min.css' />
+</head>
+<body>
+	<!-- navbar -->
+	<div class="navbar navbar--extended">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+				<a href="http://scammingthecodinginterview.com" class="navbar__logo">scammingthecodinginterview.com</a>
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Problem 012</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title">
+							Find pairs of bishops that attack each other
+							<br>
+						</h3>
+						 
+						<br>
+
+						<p style="line-height: 45px;">
+							<p>On our special chessboard, two bishops attack each other if they share the same diagonal. This includes bishops that have another bishop located between them, i.e. bishops can attack through pieces.</p>
+
+							<p>You are given N bishops, represented as (row, column) tuples on a M by M chessboard. Write a function to count the number of pairs of bishops that attack each other. The ordering of the pair doesn't matter: (1, 2) is considered the same as (2, 1).</p>
+
+							<p>For example, given M = 5 and the list of bishops:</p>
+
+							<ul><li>(0, 0)</li><li>(1, 2)</li><li>(2, 2)</li><li>(4, 0)</li></ul>
+
+							<p>The board would look like this:</p>
+
+							<pre class="wp-block-preformatted">[b 0 0 0 0]<br>
+[0 0 b 0 0]<br>
+[0 0 b 0 0]<br>
+[0 0 0 0 0]<br>
+[b 0 0 0 0]<br></pre>
+
+							
+							<p>You should return 2, since bishops 1 and 3 attack each other, as well as bishops 3 and 4.</p>
+
+						</p>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p><strong>Naive Approach</strong><br><br>A naive approach can be for each bishop, iterate over all the bishops and count what pairs attack each other.<br>The complexity of this approach would be <strong>O(N^2)</strong><br><br><strong>Efficient Approach</strong><br><br>There is a more efficient approach. First, let's simplify the problem.<br><br>Two bishops will attack each other i.e lie on the same diagonal if:<br>1. Sum of their X and Y coordinate is the same, OR<br>2. The difference of their X and Y coordinate is the same.<br><br>We can use this property and store the count of bishops that attack each other in a map.<br>Once we have the count of bishops that attack each other in place, it's just a matter of getting the combinations count of choosing 2 bishops from K attacking bishops.<br><br><br></p>
+
+
+							<p><br><strong>The above approach can be implemented as follows:</strong><br><br><br></p>
+
+						</p>
+
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/527d356fa961698497b679e713aa3745.js"></script>
+						</div>
+
+						<br>
+						<br>
+
+						<div>
+							<a href="https://scammingthecodinginterview.com" style="padding-right: 20px"><button type='submit' class="button button__accent">Subscribe here</button></a>To get a coding and design problem daily in your inbox. 
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
