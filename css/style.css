@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400");
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -10,7 +11,9 @@ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  /* 2 */;
+  font-family: 'Ubuntu', sans-serif;
+}
 
 /* Sections
    ========================================================================== */
@@ -354,7 +357,7 @@ img, svg {
   margin-right: 8pt; }
 
 html {
-  font-family: "Lato", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 15px;
   color: #666;
   line-height: 1.7;
@@ -726,16 +729,16 @@ select {
   padding: 24pt 0; }
 
 .landing__section:nth-child(odd) {
-  background-color: #f7f7f7;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee; }
 
 .navbar {
-  position: fixed;
-  z-index: 100;
   width: 100%;
-  background-color: #6C63FF;
-  transition: 0.7s; }
+  background-color: #ffffff;
+  transition: 0.7s; 
+  border-bottom: 2px solid #f1f1f1;
+}
+
   .navbar--nofixed {
     position: relative;
     z-index: 3; }
@@ -745,12 +748,13 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: 100px;
+  font-size: 1.425rem;
   color: #fff;
   transition: 0.7s; }
 
 .navbar__logo {
-  font-size: 1.325rem;
+  font-size: 2.325rem;
   transition: 0;
   color: #fff;
   text-decoration: none; }
@@ -770,7 +774,7 @@ select {
       .navbar__menu li {
         margin-left: 16pt; } }
   .navbar__menu a {
-    color: #fff; }
+    color: #6156F3; }
     @media (min-width: 992px) {
       .navbar__menu a {
         opacity: 0.75; }
@@ -856,12 +860,11 @@ select {
 .hero {
   position: relative;
   width: 100%;
-  background-image: url("../images/evie_default_bg.jpeg");
   box-shadow: 0 4px 11px rgba(124, 146, 169, 0.5);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  color: #ffffff; }
+  background-color: #fbfbfb; }
   .hero__inner {
     position: relative;
     z-index: 3; }
@@ -888,7 +891,7 @@ select {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  opacity: 0.66;
+  opacity: 0.99;
   z-index: 2; }
 
 .hero__content {
@@ -896,12 +899,10 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc( 100vh - 50px);
-  padding: calc( 92px) 0;
+  padding: 22px;
   overflow: auto; }
   .hero__content__inner {
     width: 100%;
-    max-width: 600px;
     text-align: center; }
 
 /*--- CONTENT STYLING ---*/
@@ -1080,7 +1081,10 @@ select {
 
 .footer {
   background-color: #ffffff;
-  padding: 36pt 0; }
+  padding: 36pt 0; 
+height: 75px;
+margin-top: 50px;
+}
 
 .footer__inner {
   -js-display: flex;
