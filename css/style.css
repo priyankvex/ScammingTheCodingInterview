@@ -750,7 +750,7 @@ select {
   justify-content: space-between;
   height: 100px;
   font-size: 1.425rem;
-  color: #fff;
+  color: #6156F3;
   transition: 0.7s; }
 
 .navbar__logo {
@@ -811,7 +811,7 @@ select {
   width: 100%;
   display: block;
   list-style: none;
-  background-color: #333C44;
+  background-color: #ffffff;
   color: #fff; }
 
 .nav__mobile li {
@@ -848,7 +848,7 @@ select {
   .js .nav__mobile {
     position: relative; }
   .js .nav__mobile.closed {
-    max-height: none; }
+    }
   .nav-toggle {
     display: none; } }
 
