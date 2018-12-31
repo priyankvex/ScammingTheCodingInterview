@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the Coding Interview | Problem 014</title>
+	<link rel='stylesheet' href='../css/style.css' />
+	<link rel="shortcut icon" type="image/png" href="../scamming_the_coding_interview_logo.png"/>
+</head>
+<body>
+	
+	<!-- Hero(extended) navbar -->
+	<div class="navbar">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+
+				<nav class="navbar__menu">
+					<ul>
+						<li>
+							<a href="index.html">
+								<img src="../scamming_the_coding_interview_logo.png" style="width: 60px; height: 60px;">
+							</a>
+						</li>
+						<li>
+							<a href="index.html">Scamming the coding interview</a>	
+						</li>
+					</ul>
+				</nav>
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+						<li><a href="http://priyankvex.com">Past Problems</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Problem 014</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title">
+							Find maximum frequency path value for a graph
+							<br>
+						</h3>
+						 
+						<br>
+
+						<p style="line-height: 45px;">
+							
+							<p>In a directed graph, each node is assigned an uppercase letter. We define a path's value as the number of the most-frequently-occurring letter along that path. For example, if a path in the graph goes through "ABACA", the value of the path is 3, since there are 3 occurrences of 'A' on the path.</p>
+
+							<p>Given a graph with&nbsp;<code>n</code>&nbsp;nodes and&nbsp;<code>m</code>&nbsp;directed edges, return the largest value path of the graph. If the largest value is infinite, then return null.</p>
+
+							<p>The graph is represented with a string and an edge list. The&nbsp;<code>i</code>-th character represents the uppercase letter of the&nbsp;<code>i</code>-th node. Each tuple in the edge list&nbsp;<code>(i, j)</code>&nbsp;means there is a directed edge from the&nbsp;<code>i</code>-th node to the&nbsp;<code>j</code>-th node. Self-edges are possible, as well as multi-edges.</p>
+
+							<p>For example, the following input graph:<br></p>
+
+							<div class="wp-block-image"><figure class="aligncenter"><img src="https://priyankvex.files.wordpress.com/2018/12/Untitled-Diagram-1.png" alt="" class="wp-image-1164"/></figure></div>
+
+							<p>The output will be 4, since A will have the maximum frequency out of all the letters which will occur in the path : A -> B -> A -> C -> A</p>
+
+						</p>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>Let's try to simplify the problem.<br>For each path of the graph, the value is equal to the frequency of the most frequently occurring letter. Out of all the possible paths, we have to find the maximum value.<br><br><strong>Approach 1:</strong><br></p>
+
+							<p>We can do a classic DFS over the graph and go through all the paths possible. <br>For each path, we keep track of the frequency of each letter.<br><br>Out all such paths and their letter frequency count, we find the maximum frequency.<br><br><strong>More Efficient Approach:</strong><br><br>We can easily notice that if a node has mode than 1 incoming edge, then we will end up doing many repeated computations.<br><br>We can cache the result for each of the node as a map that contains the frequency count for that node.<br>If we ever encounter that node again, we'll use the value from the cache. </p>
+
+
+							<p><br><strong>The above approach can be implemented as follows:</strong><br><br><br></p>
+
+						</p>
+
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/c283a1c0ae3c68a51fbd8da826714076.js"></script>
+						</div>
+
+						<br>
+						<br>
+
+						<div>
+							<a href="https://scammingthecodinginterview.com" style="padding-right: 20px"><button type='submit' class="button button__accent">Subscribe here</button></a>To get a coding and design problem daily in your inbox. 
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
