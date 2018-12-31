@@ -1395,3 +1395,18 @@ margin-top: 50px;
         border-bottom: 1px solid #6C63FF;
         transform: none;
         transition: none; } }
+
+#kevin {
+  min-width: 500px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+}
+
+#kevin .first {
+  grid-column: 1/2;
+}
+
+#kevin .second {
+  grid-column: 2/2
+}
