@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the Coding Interview | Problem 016</title>
+	<link rel='stylesheet' href='../css/style.css' />
+	<link rel="shortcut icon" type="image/png" href="../scamming_the_coding_interview_logo.png"/>
+</head>
+<body>
+	
+	<!-- Hero(extended) navbar -->
+	<div class="navbar">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+
+				<nav class="navbar__menu">
+					<!-- <ul>
+						<li>
+							<a href="index.html">
+								<img src="../scamming_the_coding_interview_logo.png" style="width: 60px; height: 60px;">
+							</a>
+						</li>
+						<li>
+							<a href="index.html">Scamming the coding interview</a>	
+						</li>
+					</ul> -->
+					<div id="kevin">
+						<a class="first" href="index.html">
+								<img src="../scamming_the_coding_interview_logo.png" style="width: 60px; height: 60px;">
+						</a>
+						<a class="second" href="../index.html">Scamming the coding interview</a>	
+					</ul>
+				</nav>
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+						<li><a href="../past_problems.html">Past Problems</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Problem 016</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title">
+							Select a random number from stream, with O(1) space
+							<br>
+						</h3>
+						 
+						<br>
+
+						<p style="line-height: 45px;">
+							
+							<p>Sample a number from a continuous stream using constant space.<br><br>Given an infinite stream of numbers, at any point sample a number randomly from the numbers seen so far, using constant space.</p>
+
+						</p>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>We are confined to not use any extra space. That means we cannot store the numbers we have seen so far.<br><br>This is where the <a href="https://en.wikipedia.org/wiki/Reservoir_sampling">Reservoir Sampling</a> shines, which allows us to choose K items from N items randomly, where either N if very large or is unknown.<br><br><strong>Algorithm Overview:</strong><br>1. Keep a counter for the number of items we have seen so far.<br>2. When a new number arrives:<br>3. Generate a random number from 1 to counter.<br>4. If random_number == counter: The new number is the sampled random number.<br>5. Else, keep the random number that was previously sampled.<br><br><strong>Intuitive Explanation:</strong><br>Let's try to informally explain how this approach works and gives an equal probability of all the numbers.<br><br> Let R be the random number that we have. (Arrived at Kth counter)<br>A new number N arrives.<br>Now we have K+1 numbers.<br><br>The probability of N being selected as the new random number is : <strong>1/(K+1)</strong><br></p>
+
+							<p>The probability of R being kept at the sampled random number is:<br>R was picked when it arrived + New number was not picked when it arrived.<br>= (1/K) + (K/K+1) = <strong>1/(K+1)</strong><br><br></p>
+
+							<p><br><strong>The above approach can be implemented as follows:</strong><br><br><br></p>	
+						</p>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/b8f2600d63e4706185983d55f02fd8b8.js"></script>
+						</div>
+
+						<br>
+						<br>
+
+						<div>
+							<a href="https://scammingthecodinginterview.com" style="padding-right: 20px"><button type='submit' class="button button__accent">Subscribe here</button></a>To get a coding and design problem daily in your inbox. 
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
