@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the Coding Interview | Problem 025</title>
+	<link rel='stylesheet' href='../css/style.css' />
+	<link rel="shortcut icon" type="image/png" href="../scamming_the_coding_interview_logo.png"/>
+</head>
+<body>
+	
+	<!-- Hero(extended) navbar -->
+	<div class="navbar">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+
+				<nav class="navbar__menu">
+					<!-- <ul>
+						<li>
+							<a href="index.html">
+								<img src="../scamming_the_coding_interview_logo.png" style="width: 60px; height: 60px;">
+							</a>
+						</li>
+						<li>
+							<a href="index.html">Scamming the coding interview</a>	
+						</li>
+					</ul> -->
+					<div id="kevin">
+						<a class="first" href="index.html">
+								<img src="../scamming_the_coding_interview_logo.png" style="width: 60px; height: 60px;">
+						</a>
+						<a class="second" href="../index.html">Scamming the coding interview</a>	
+					</ul>
+				</nav>
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+						<li><a href="../past_problems.html">Past Problems</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Problem 025</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title">
+							Divide two numbers without using division, multiply or modulo
+							<br>
+						</h3>
+						 
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>Implement division of two positive integers without using the division, multiplication, or modulus operators. Return the quotient as an integer, ignoring the remainder.</p>
+
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>You should start getting a feel that these sort of questions generally involve bit-manipulation.<br><br><br><strong>Naive Approach:</strong><br>A very basic approach can be to keep adding the divisor till it becomes greater than the dividend.<br><br><strong>Bit-Manipulation Approach:</strong><br>We'll try to form the quotient in the binary form.<br>This can be done by starting with the most significant bit first and keeping moving towards right.<br><br><br><strong>Algorithm Overview:</strong><br>1. Iterate from i = 31 to 0<br>2. If sum_so_far + divisor &lt;&lt; i &lt; dividend, then the ith bit is 1 in the quotient.<br>3. Store the ith bit as one in the quotient.<br><br> </p>
+
+							<p><br><strong>The above approach can be implemented as follows:</strong><br><br><br></p>
+
+						</p>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/1ee3fdb6998ff268d28038e00f6febd7.js"></script>
+						</div>
+
+						<br>
+						<br>
+
+						<div>
+							<a href="https://scammingthecodinginterview.com" style="padding-right: 20px"><button type='submit' class="button button__accent">Subscribe here</button></a>To get a coding and design problem daily in your inbox. 
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
