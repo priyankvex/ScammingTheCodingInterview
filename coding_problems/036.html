@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the Coding Interview | Problem 036</title>
+	<link rel='stylesheet' href='../css/style.css' />
+	<link rel="shortcut icon" type="image/png" href="../scamming_the_coding_interview_logo.png"/>
+</head>
+<body>
+	
+	<!-- Hero(extended) navbar -->
+	<div class="navbar">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+
+				<nav class="navbar__menu">
+					<!-- <ul>
+						<li>
+							<a href="index.html">
+								<img src="../scamming_the_coding_interview_logo.png" style="width: 60px; height: 60px;">
+							</a>
+						</li>
+						<li>
+							<a href="index.html">Scamming the coding interview</a>	
+						</li>
+					</ul> -->
+					<div id="kevin">
+						<a class="first" href="index.html">
+								<img src="../scamming_the_coding_interview_logo.png" style="width: 60px; height: 60px;">
+						</a>
+						<a class="second" href="../index.html">Scamming the coding interview</a>	
+					</ul>
+				</nav>
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+						<li><a href="../past_problems.html">Past Problems</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Problem 036</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title">
+							Find the Kth element from the end in a singly linked list
+							<br>
+						</h3>
+						 
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>Given a singly linked list, return Kth element from the end.<br><br>Example, <br>1->2->3->4 and K = 2, should return 3.</p>
+
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>A possible approach can be to traverse the list to find the value of N (the length of the list). After that, we can find the value of the kth element from the end too.<br><br><strong>More Efficient Approach</strong><br>A more efficient approach can be to maintain two pointers.<br>Use the first pointer to traverse the K element from the head.<br>After that start moving the first and the second pointers together until the first pointer reaches the end of the list.<br>The second pointer will be at the kth element from the end or N-Kth element from the beginning.</p>
+
+							<p><br><strong>The above approach can be implemented as follows:</strong><br><br><br></p>
+
+						</p>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/0bd6b03a7a2e665b9dbfc7431d866f13.js"></script>
+						</div>
+
+						<br>
+						<br>
+
+						<div>
+							<a href="https://scammingthecodinginterview.com" style="padding-right: 20px"><button type='submit' class="button button__accent">Subscribe here</button></a>To get a coding and design problem daily in your inbox. 
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
+  
