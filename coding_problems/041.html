@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the Coding Interview | Problem 041</title>
+	<link rel='stylesheet' href='../css/style.css' />
+	<link rel="shortcut icon" type="image/png" href="../scamming_the_coding_interview_logo.png"/>
+</head>
+<body>
+	
+	<!-- Hero(extended) navbar -->
+	<div class="navbar">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+
+				<nav class="navbar__menu">
+					<!-- <ul>
+						<li>
+							<a href="index.html">
+								<img src="../scamming_the_coding_interview_logo.png" style="width: 60px; height: 60px;">
+							</a>
+						</li>
+						<li>
+							<a href="index.html">Scamming the coding interview</a>	
+						</li>
+					</ul> -->
+					<div id="kevin">
+						<a class="first" href="index.html">
+								<img src="../scamming_the_coding_interview_logo.png" style="width: 60px; height: 60px;">
+						</a>
+						<a class="second" href="../index.html">Scamming the coding interview</a>	
+					</ul>
+				</nav>
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+						<li><a href="../past_problems.html">Past Problems</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Problem 041</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title">
+							Find the maximum element in all subarrays of size K
+							<br>
+						</h3>
+						 
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>Given an array and an integer k, find the maximum for each and every contiguous subarray of size k.<br><br>Example, for the given array <br>[1, 2, 3, 1, 4, 5, 2, 3, 6] and K = 3<br>the answer will be <br>[3, 3, 4, 5, 5, 5, 6]</p>
+
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>A naive solution can be to traverse each window and find the maximum in each window.<br>The time complexity of this solution is O(NK).<br><br><strong>An efficient solution</strong><br>An efficient solution can be made using the deque structure.<br>The idea is to keep a deque of the maximum size of K (size of the window).<br>For each element, remove all the elements from the queue from the left that are out of the window.<br>From the right, remove all the elements that are smaller than the current element.<br>Thus at each point, the first element in the queue is the largest element for that sliding window.</p>
+
+							<p><br><strong>The above approach can be implemented as follows:</strong><br><br><br></p>
+
+						</p>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/a7f18d81e76ffbdb98491872f69da562.js"></script>
+						</div>
+
+						<br>
+						<br>
+
+						<div>
+							<a href="https://scammingthecodinginterview.com" style="padding-right: 20px"><button type='submit' class="button button__accent">Subscribe here</button></a>To get a coding and design problem daily in your inbox. 
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
