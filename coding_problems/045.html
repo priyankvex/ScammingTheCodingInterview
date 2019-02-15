@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the Coding Interview | Problem 045</title>
+	<link rel='stylesheet' href='../css/style.css' />
+	<link rel="shortcut icon" type="image/png" href="../scamming_the_coding_interview_logo.png"/>
+</head>
+<body>
+	
+	<!-- Hero(extended) navbar -->
+	<div class="navbar">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+
+				<nav class="navbar__menu">
+					<!-- <ul>
+						<li>
+							<a href="index.html">
+								<img src="../scamming_the_coding_interview_logo.png" style="width: 60px; height: 60px;">
+							</a>
+						</li>
+						<li>
+							<a href="index.html">Scamming the coding interview</a>	
+						</li>
+					</ul> -->
+					<div id="kevin">
+						<a class="first" href="index.html">
+								<img src="../scamming_the_coding_interview_logo.png" style="width: 60px; height: 60px;">
+						</a>
+						<a class="second" href="../index.html">Scamming the coding interview</a>	
+					</ul>
+				</nav>
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+						<li><a href="../past_problems.html">Past Problems</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hero unit -->
+	<div class="page__header">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="page__header__inner">
+			<div class="container">
+				<div class="page__header__content">
+					<div class="page__header__content__inner" id='navConverter'>
+						<h1 class="page__header__title">Problem 045</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title">
+							Two nodes in a BST are swapped. Correct the tree.
+							<br>
+						</h3>
+						 
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>Two nodes in a BST are swapped, correct the tree.<br><br>Input Tree:          <br>                     10<br>                     /  \        <br>                   5    8<br>                  / \     <br>               2   20 <br><br>In the above tree, nodes 20 and 8 must be swapped to fix the tree.   Following is the output tree:         <br>                10<br>                /  \<br>              5    20<br>             / \<br>           2   8<br><br></p>
+
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>We can leverage the fact that the inorder traversal of a BST is a sorted list of numbers.<br>Now since the numbers that are swapped will be smaller than their previous element, we can leverage this to get the incorrect nodes.<br><br>If the incorrect nodes are not adjacent we'll find 2 such instances where the current element is smaller than the previous element, otherwise there will be only 1 such instance. </p>
+
+							<p><br><strong>The above approach can be implemented as follows:</strong><br><br><br></p>
+
+						</p>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/d8fb2c22dd878074983f92ec7a7de7b4.js"></script>
+						</div>
+
+						<br>
+						<br>
+
+						<div>
+							<a href="https://scammingthecodinginterview.com" style="padding-right: 20px"><button type='submit' class="button button__accent">Subscribe here</button></a>To get a coding and design problem daily in your inbox. 
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
