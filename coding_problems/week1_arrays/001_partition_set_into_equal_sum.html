@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the coding interview</title>
+	<link rel="icon" href="../../scamming_the_coding_interview_logo.png" type="image/gif" sizes="16x16">
+	<link rel='stylesheet' href='../../css/style.css' />
+</head>
+<body>
+
+	<!-- Hero(extended) navbar -->
+	<div class="navbar navbar--extended">
+
+		<nav class="nav__mobile"></nav>
+		
+		<div class="container"  style="border-bottom: 2px solid #6B5FE9;">
+			<div class="navbar__inner">
+				
+				<a href="../../index.html">
+					<img id="banner_logo" src="../../stci.png">
+				</a>
+				
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+						<li><a href="../../past_problems.html">Past Problems</a></li>
+						<li><a href="#">Past Articles</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title" style="text-align: center;margin: 0 auto;">
+							Given a multiset of integers, return whether it can be partitioned into two subsets whose sums are the same.
+						</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+							For example, given the multiset {15, 5, 20, 10, 35, 15, 10}, it would return true, since we can split it up into {15, 5, 10, 15, 10} and {20, 35}, which both add up to 55.<br><br>
+
+Given the multiset {15, 5, 20, 10, 35}, it would return false, since we can't split it up into two subsets that add up to the same sum.
+						</p>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<!-- wp:paragraph -->
+<p>The above problem can be solved using a technique called as <strong>Meet in the middle </strong>approach.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I would recommend watching this video to get an overview of the MitM technique. <a href="https://youtu.be/57SUNQL4JFA">https://youtu.be/57SUNQL4JFA</a><br><br>We need to partition the set in such a way that the 2 parts have the same sum. That means that the problem can be simplified to finding a set which has the sum equal to <strong>total_sum/2.</strong><br><br>The brute force approach would generate all the combinations of N (size of the set) and pick the 2 sets that have the sum <strong>total_sum/2.</strong><br><br> Time complexity, in this case, would be <strong>O(2^N).</strong><br><br>Using meet in the middle technique, we can reduce the time complexity to be <strong>O(2^(N/2))</strong>, which for big values of N would be a huge improvement.<br><br><strong>Overview of the algorithm looks as follows:</strong><br>1. Divide the array into 2 parts, A and B.<br>2. Generate all combinations and their sum for the set A and store that in a map. This can be done in <strong>O(2^(N/2))</strong><br>3. Generate all the combinations for the set B.<br>4. For each combination sum K for the set B, check if the sum (total_sum/2) - K is present in the map.<br>5 If yes, then we have found the solution.<br><br>The above approach can be implemented as follows.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><br><br></p>
+<!-- /wp:paragraph -->
+
+						</p>
+
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/3c317db81f979d4b4b7335caee125377.js"></script>
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>

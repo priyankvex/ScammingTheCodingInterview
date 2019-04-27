@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the coding interview</title>
+	<link rel="icon" href="../../scamming_the_coding_interview_logo.png" type="image/gif" sizes="16x16">
+	<link rel='stylesheet' href='../../css/style.css' />
+</head>
+<body>
+	
+	<!-- Hero(extended) navbar -->
+	<div class="navbar navbar--extended">
+
+		<nav class="nav__mobile"></nav>
+		
+		<div class="container"  style="border-bottom: 2px solid #6B5FE9;">
+			<div class="navbar__inner">
+				
+				<a href="../../index.html">
+					<img id="banner_logo" src="../../stci.png">
+				</a>
+				
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+						<li><a href="../../past_problems.html">Past Problems</a></li>
+						<li><a href="#">Past Articles</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title">
+							Find the longest increasing subsequence in an array in O(NlogN)
+							<br>
+						</h3>
+						 
+						<br>
+
+						<p style="line-height: 45px;">
+							
+							Given an array of numbers, find the length of the longest increasing subsequence in the array. The subsequence does not necessarily have to be contiguous.
+
+							For example, given the array <br>
+							[0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15], <br>the longest increasing subsequence has length 6: it is 0, 2, 6, 9, 11, 15.
+
+						</p>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p style="line-height: 45px;">
+
+							<p>Let&nbsp;<code>S[pos]</code>&nbsp;be defined as the smallest integer that ends an increasing sequence of length&nbsp;<code>pos</code>. Now iterate through every integer&nbsp;<code>X</code>&nbsp;of the input set and do the following:</p>
+
+							<ol><li>If&nbsp;<code>X</code>&nbsp;&gt; last element in&nbsp;<code>S</code>, then append&nbsp;<code>X</code>&nbsp;to the end of&nbsp;<code>S</code>. This essentialy means we have found a new largest&nbsp;<code>LIS</code>.</li><li>Otherwise find the smallest element in&nbsp;<code>S</code>, which is&nbsp;<code>&gt;=</code>&nbsp;than&nbsp;<code>X</code>, and change it to&nbsp;<code>X</code>. Because&nbsp;<code>S</code>&nbsp;is sorted at any time, the element can be found using binary search in&nbsp;<code>log(N)</code>.</li></ol>
+
+							<p>Total runtime -&nbsp;<code>N</code>&nbsp;integers and a binary search for each of them - N * log(N) = O(N log N)</p>
+
+							<p>Now let's do a real example:</p>
+
+							<p>Collection of integers:&nbsp;<code>2 6 3 4 1 2 9 5 8</code></p>
+
+							<p>Steps:</p>
+
+							<pre>
+0. S = {} - Initialize S to the empty set
+1. S = {2} - New largest LIS
+2. S = {2, 6} - New largest LIS
+3. S = {2, 3} - Changed 6 to 3
+4. S = {2, 3, 4} - New largest LIS
+5. S = {1, 3, 4} - Changed 2 to 1
+6. S = {1, 2, 4} - Changed 3 to 2
+7. S = {1, 2, 4, 9} - New largest LIS
+8. S = {1, 2, 4, 5} - Changed 9 to 5
+9. S = {1, 2, 4, 5, 8} - New largest LIS
+							</pre>
+
+							<p>So the length of the LIS is&nbsp;<code>5</code>&nbsp;(the size of S).</p>
+
+						</p>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/2aa0ff50f68ba1172736c243fa0394b2.js"></script>
+						</div>
+
+						<br>
+						<br>
+
+						<div>
+							<a href="https://scammingthecodinginterview.com" style="padding-right: 20px"><button type='submit' class="button button__accent">Subscribe here</button></a>To get a coding and design problem daily in your inbox. 
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>

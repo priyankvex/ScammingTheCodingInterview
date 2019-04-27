@@ -740,7 +740,6 @@ select {
   position: none;
   z-index: 100;
   width: 100%;
-  border-bottom: 2px solid #6B5FE9;
   background-color: #abd3bb;
   transition: 0.7s; }
   .navbar--nofixed {
@@ -806,14 +805,11 @@ select {
 /*--- Extended and transparent version ---*/
 .navbar--extended {
   background-color: #ffffff;
-  border-bottom: none;
 }
 
 .navbar--extended .navbar__inner {
   height: 100%;
   color: #6B5FE9;
-  border-bottom: 5px solid red;
-  border-bottom: none;
 }
 
 /*! responsive-nav.js 1.0.39 by @viljamis */
