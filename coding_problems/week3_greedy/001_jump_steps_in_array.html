@@ -51,32 +51,30 @@
 				<div class="page__main">
 					<div>
 						<br>
-						<h3 class="page__main__title">
-							Given a binary tree, find its maximum path sum.
+						<h3 class="page__main__title" style="font-family: 'Merriweather', serif;">
+							Jumping steps in the array.
 						</h3>
 
 						<br>
 						<br>
 
-						<p>Given a binary tree, find out its maximum path sum.<br>A path should have at least one node and does not need to go through the root of the tree<br><br>Example, the tree given below the maximum path sum is 41 (11 + 8 + 10 + 12).</p>
-
-						<pre class="wp-block-preformatted">       10<br>      /   \<br>     8    12<br>      \<br>      11 </pre>
+						<p>Given an array of non-negative numbers, and you are positioned at the first element.<br>You are allowed to make number of jumps that's smaller than or equal to the value at your position in the array. <br>Determine whether we can reach the end of the array or not.<br><br>Example:<br>3 4 0 0 0 1<br>should return True<br>4 3 2 1 0 1<br>should return False</p>
 
 						<br>
 						<br>
 
-						<h3 style="text-align: center;margin: 0 auto;">Solution</h3>
+						<h3 style="text-align: center;margin: 0 auto; font-family: 'Merriweather', serif;">Solution</h3>
 
 						<br>
 						<br>
 
-						<p>With any tree problem, it really helps to think recursively.<br>We can observe the following for any given node, maximum path sum through that node is maximum of the following values:<br>1. value of the node<br>2. sum of node + left subtree max path sum<br>3. sum of node + right subtree max path sum<br>4. sum of node + left subtree max path sum + right subtree max path sum<br><br>We can use this to implement the solution.</p>
+						<p>This problem can be solved using the greedy approach.<br>We can traverse all the elements 1 by 1, starting from the first element that are reachable.<br>For this, we keep track of a variable reach that stores the maximum distance that is reachable so far.<br><br><br></p>
 
 						<br>
 						<br>
 
 						<div>
-							<script src="https://gist.github.com/priyankvex/441088ef1bb0dc885e7cfe5321884193.js"></script>F
+							<script src="https://gist.github.com/priyankvex/0f658bba589de0f5e131a640f3d8b8e9.js"></script>
 						</div>
 
 					</div>
