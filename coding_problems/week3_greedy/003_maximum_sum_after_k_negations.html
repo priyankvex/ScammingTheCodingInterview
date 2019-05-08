@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132436959-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-132436959-1');
+	</script>
+	
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the coding interview</title>
+	<link rel="icon" href="scamming_the_coding_interview_logo.png" type="image/gif" sizes="16x16">
+	<link rel='stylesheet' href='../../css/style.css' />
+</head>
+<body>
+
+	<!-- Hero(extended) navbar -->
+	<div class="navbar navbar--extended">
+
+		<nav class="nav__mobile"></nav>
+		
+		<div class="container"  style="border-bottom: 2px solid #6B5FE9;">
+			<div class="navbar__inner">
+				
+				<a href="../../index.html">
+					<img id="banner_logo" src="../../stci.png">
+				</a>
+				
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+						<li><a href="../../past_problems.html">Past Problems</a></li>
+						<li><a href="../../past_articles.html">Past Articles</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title" style="font-family: 'Merriweather', serif;">
+							Find the maximum sum of the array after K negations.
+						</h3>
+
+						<br>
+						<br>
+
+						<p>We are given an array <code>a</code> and an integer <code>k</code>. We must make <code>k</code> modifications to to the array in which replace the element at any index <code>i</code> with <code>-a[i]</code>.<br>We have the determine the maximum sum that can be obtained after K such modifications.<br><br>Example:</p>
+
+						<pre class="wp-block-preformatted"><strong>Input: </strong>A = [2,-3,-1,5,-4], K = 2
+<strong>Output: </strong>13
+<strong>Explanation: </strong>Choose indices (1, 4) and A becomes [2,3,-1,5,4].</pre>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto; font-family: 'Merriweather', serif;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p>Just like our previous greedy problems, this also has a property that we can observer, which can be greedily used to find the answer.<br><br>1. We want the smallest of the negative numbers to become positive.<br>2. After that we want the smallest element in the array to become negative, if required so that we can get the maximum sum.<br><br></p>
+
+						<br>
+						<br>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/8a3aee2ec341748d317ec8e7ac844a53.js"></script>
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
