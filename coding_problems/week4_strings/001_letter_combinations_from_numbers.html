@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132436959-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-132436959-1');
+	</script>
+	
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the coding interview</title>
+	<link rel="icon" href="scamming_the_coding_interview_logo.png" type="image/gif" sizes="16x16">
+	<link rel='stylesheet' href='../../css/style.css' />
+</head>
+<body>
+
+	<!-- Hero(extended) navbar -->
+	<div class="navbar navbar--extended">
+
+		<nav class="nav__mobile"></nav>
+		
+		<div class="container"  style="border-bottom: 2px solid #6B5FE9;">
+			<div class="navbar__inner">
+				
+				<a href="../../index.html">
+					<img id="banner_logo" src="../../stci.png">
+				</a>
+				
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+						<li><a href="../../past_problems.html">Past Problems</a></li>
+						<li><a href="../../past_articles.html">Past Articles</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title" style="font-family: 'Merriweather', serif;">
+							Letter combinations from numbers of a keypad.
+						</h3>
+
+						<br>
+						<br>
+
+						<p>Remember the old keypads where each number had 2-3 letters associated with it. Given a string containing numbers form 2 to 9, find out all the possible word that string of numbers could mean. <br><br>Example:<br></p>
+
+						<pre class="wp-block-preformatted">numbers = "23"
+ans = ['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']</pre>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto; font-family: 'Merriweather', serif;">Solution</h3>
+
+						<br>
+						<br>
+
+						<<p>We can easily think of this problem in terms in sub-problems.<br>If we have all the word combinations available to us for the first n-1 digits, then for the nth digit, we just need to append all the characters corresponding to the nth digit to each one of them.<br><br>Using the above idea we can think of a recursive solution.<br><br><strong>Algorithm Overview:</strong><br>1. For a given string containing numbers.<br>2. Handle the base recursion cases.<br>3. For a string having only 1 digit, each individual character is the return value.<br>4. For each character at position n, get the return value from the position n-1, and append all the characters corresponding to the digit at n, 1 by 1.<br>5. Return this value as the answer.<br><br><br> </p>
+
+						<br>
+						<br>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/77b6b20cfba4f1c53d112bf6deeff5e7.js"></script>
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
