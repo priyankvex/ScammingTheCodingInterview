@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132436959-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-132436959-1');
+	</script>
+	
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the coding interview</title>
+	<link rel="icon" href="scamming_the_coding_interview_logo.png" type="image/gif" sizes="16x16">
+	<link rel='stylesheet' href='../../css/style.css' />
+</head>
+<body>
+
+	<!-- Hero(extended) navbar -->
+	<div class="navbar navbar--extended">
+
+		<nav class="nav__mobile"></nav>
+		
+		<div class="container"  style="border-bottom: 2px solid #6B5FE9;">
+			<div class="navbar__inner">
+				
+				<a href="../../index.html">
+					<img id="banner_logo" src="../../stci.png">
+				</a>
+				
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+						<li><a href="../../past_problems.html">Past Problems</a></li>
+						<li><a href="../../past_articles.html">Past Articles</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title" style="font-family: 'Merriweather', serif;">
+							Remove duplicates from a sorted array without extra space.
+						</h3>
+
+						<br>
+						<br>
+
+						<p>Given a sorted array, remove duplicates from the array in place and return the new length. Note that we are not allowed to use any extra space other than the original array.</p>
+
+						<pre class="wp-block-preformatted">Example:
+a = [1, 1, 1, 2, 2, 3]
+ans = 3
+array should be modified to [1, 2, 3, ...] with new length being 3.</pre>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto; font-family: 'Merriweather', serif;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p>We can solve this problem using two pointers approach.<br>We can leverage the fact that the array is sorted determine the unique elements and put them at the beginning of the array.</p>
+
+						<br>
+						<br>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/05ac65c6e42eb9be19b70acd171530e9.js"></script>
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
