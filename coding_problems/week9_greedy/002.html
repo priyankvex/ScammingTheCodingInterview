@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132436959-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-132436959-1');
+	</script>
+	
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the coding interview</title>
+	<link rel="icon" href="scamming_the_coding_interview_logo.png" type="image/gif" sizes="16x16">
+	<link rel='stylesheet' href='../../css/style.css' />
+</head>
+<body>
+
+	<!-- Hero(extended) navbar -->
+	<div class="navbar navbar--extended">
+
+		<nav class="nav__mobile"></nav>
+		
+		<div class="container"  style="border-bottom: 2px solid #6B5FE9;">
+			<div class="navbar__inner">
+				
+				<a href="../../index.html">
+					<img id="banner_logo" src="../../stci.png">
+				</a>
+				
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.com">Blog</a></li>
+						<li><a href="../../past_problems.html">Past Problems</a></li>
+						<li><a href="../../past_articles.html">Past Articles</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title" style="font-family: 'Merriweather', serif;">
+							Minimum number of candies required
+						</h3>
+
+						<br>
+						<br>
+
+						<p>There are N children standing in a straight line, and we have a job to distribute candies to all of them.<br>There are 2 rules to follow:<br>1. Each child must receive at least 1 candy each.<br>2. Child having higher rating than its neighbour must receive more candies than it's neighbour.<br><br>We have to find out minimum number of candies needed.<br><br>Example:<br>a = [5, 5, 4, 3, 2, 1]<br>answer = 16<br>candies = [1, 5, 4, 3, 2, 1]</p>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto; font-family: 'Merriweather', serif;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p>The problem can be approached in a greedy manner.<br>The idea is that we start by giving 1 candy to each child. If there exists a child which has a higher rating than it's neighbour, we give additional candy to her, otherwise we get away with giving only 1 candy.<br><br>We make 2 passes, first from left to right, and second from right to left, distributing candies such that the rules hold true.<br><br>Algorithm Overview:<br>1. Initialise each child with 1 candy.<br>2. Move from left to right, looking for a child which as higher rating than it's previous child.<br>3. If found, give him 1 more candy than it's previous child.<br>4. Move from right to left, looking for a child which has higher rating than its next child.<br>5. If found, give him 1 more candy than the child next to her.</p>
+
+						<br>
+						<br>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/2fa97c1a8bd369b71d4044128394ea5a.js"></script>
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
