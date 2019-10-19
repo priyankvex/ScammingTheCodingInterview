@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132436959-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-132436959-1');
+	</script>
+	
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the coding interview</title>
+	<link rel="icon" href="scamming_the_coding_interview_logo.png" type="image/gif" sizes="16x16">
+	<link rel='stylesheet' href='../css/style.css' />
+</head>
+<body>
+
+	<!-- Hero(extended) navbar -->
+	<div class="navbar navbar--extended">
+
+		<nav class="nav__mobile"></nav>
+		
+		<div class="container"  style="border-bottom: 2px solid #6B5FE9;">
+			<div class="navbar__inner">
+				
+				<a href="../index.html">
+					<img id="banner_logo" src="../stci.png">
+				</a>
+				
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.wordpress.comcom">Blog</a></li>
+						<li><a href="../past_problems.html">Past Problems</a></li>
+						<li><a href="../past_articles.html">Past Articles</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title" style="font-family: 'Merriweather', serif;">
+							Find the sum of nodes in a BST that fall in a given range.
+						</h3>
+
+						<br>
+						<br>
+
+						<p>We are given a BST and a range (startValue, endValue), we have to compute the sum of the nodes of the BST which fall in this range.<br>There is one additional requirement though. We have to optimise for millions of queries being performed on a given tree.<br><br>Example:</p>
+
+						<pre class="wp-block-preformatted">         15
+     10       20
+   8   12   16
+  
+range = [10, 16]
+ans = 10 + 12 + 15 + 16 = 63</pre>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto; font-family: 'Merriweather', serif;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p>A naive solution can be to just traverse the array and keep summing the elements.<br>But we are required to optimise the solution for millions of read.<br><br>Whenever we hear terms like disproportionately more reads than writes, we should consider some pre-processing or caching to speed up the reads.<br><br>Here also we can pre-compute some values for the given tree to speed to up the queries.<br>With every node we are going to store 2 values:<br>1. Range of the values in the tree planted at that node.<br>2. Sum of the values in the tree planted at that node.<br><br><strong>Algorithm Overview:</strong><br>1. If a node has a range that's completely within the required range, return the sum stored with the node.<br>2. If not search recursively in the right and left substree to get the valid nodes sum.<br>3. Add the node's value if it falls in the range. </p>
+
+						<br>
+						<br>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/6a07d485e41b3daea01c37fdc10ae153.js"></script>
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
