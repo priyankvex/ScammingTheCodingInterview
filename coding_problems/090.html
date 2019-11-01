@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132436959-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-132436959-1');
+	</script>
+	
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the coding interview</title>
+	<link rel="icon" href="scamming_the_coding_interview_logo.png" type="image/gif" sizes="16x16">
+	<link rel='stylesheet' href='../css/style.css' />
+</head>
+<body>
+
+	<!-- Hero(extended) navbar -->
+	<div class="navbar navbar--extended">
+
+		<nav class="nav__mobile"></nav>
+		
+		<div class="container"  style="border-bottom: 2px solid #6B5FE9;">
+			<div class="navbar__inner">
+				
+				<a href="../index.html">
+					<img id="banner_logo" src="../stci.png">
+				</a>
+				
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.wordpress.comcom">Blog</a></li>
+						<li><a href="../past_problems.html">Past Problems</a></li>
+						<li><a href="../past_articles.html">Past Articles</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title" style="font-family: 'Merriweather', serif;">
+							Solve the 8 puzzle
+						</h3>
+
+						<br>
+						<br>
+
+						<p>We all the know the famous 8 puzzle game. Where we have tiles numbered 1 to 8 in a 3 * 3 game board with one blank tile and our job is to arrange the board into a target configuration by swapping tiles with the blank tiles.<br><br>We have to implement a 8 puzzle solver to solve the puzzle in minimum moves.<br>We can assume that for this problem the board is always solvable.<br><br>Example:</p>
+
+						<pre class="wp-block-preformatted">board = [
+    ["1", "2", "3"],
+    ["5", "6", "_"],
+    ["7", "8", "4"]
+]
+target_board = [
+    ["1", "2", "3"],
+    ["5", "8", "6"],
+    ["_", "7", "4"]
+]
+
+answer = 
+ ['1', '2', '3']
+ ['5', '6', '_']
+ ['7', '8', '4']
+
+ ['1', '2', '3']
+ ['5', '_', '6']
+ ['7', '8', '4']
+
+ ['1', '2', '3']
+ ['5', '8', '6']
+ ['7', '_', '4']
+
+ ['1', '2', '3']
+ ['5', '8', '6']
+ ['_', '7', '4']</pre>
+
+						<br>
+						<br>
+
+						<h3 style="text-align: center;margin: 0 auto; font-family: 'Merriweather', serif;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p>We can start thinking about this problem with standard techniques like DFS and BFS.<br>Since we have to find the minimum moves, BFS could've worked. But there is one catch, how do we determine if a branch is dead. <br><br>Here we'll explore a different approach called as branch and bound. In this approach for every branch that's open we choose a branch that has least cost associated with it.<br><br>Cost = Moves so far + Misplaced tiles remaining</p>
+
+						<br>
+						<br>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/a43782f8a052d103dea471b275e92f0c.js"></script>
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
