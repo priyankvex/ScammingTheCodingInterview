@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132436959-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-132436959-1');
+	</script>
+	
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Scamming the coding interview</title>
+	<link rel="icon" href="scamming_the_coding_interview_logo.png" type="image/gif" sizes="16x16">
+	<link rel='stylesheet' href='../css/style.css' />
+</head>
+<body>
+
+	<!-- Hero(extended) navbar -->
+	<div class="navbar navbar--extended">
+
+		<nav class="nav__mobile"></nav>
+		
+		<div class="container"  style="border-bottom: 2px solid #6B5FE9;">
+			<div class="navbar__inner">
+				
+				<a href="../index.html">
+					<img id="banner_logo" src="../stci.png">
+				</a>
+				
+				
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="http://priyankvex.wordpress.comcom">Blog</a></li>
+						<li><a href="../past_problems.html">Past Problems</a></li>
+						<li><a href="../past_articles.html">Past Articles</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+			</div>
+		</div>
+
+	<!-- Page content -->
+	<div class="page">
+		<div class="container" style="width: 60%;" >
+			
+				<div class="page__main">
+					<div>
+						<br>
+						<h3 class="page__main__title" style="font-family: 'Merriweather', serif;">
+							Complete the itinerary from the collection of air tickets.
+						</h3>
+
+						<br>
+						<br>
+
+						<p>We are given a collection of air tickets in the form of (source, destination).<br>These collection of air tickets are from a complete itinerary for a person who cannot seem to recall in what order he possible could have visited the places, but she knows that she started her trip from the beautiful city 'J'.<br><br>We have to find the complete itinerary from the collection for air tickets. <br>If multiple itineraries are possible, get the lexicographically smallest one.<br><br><br><br>Example:</p>	
+
+						<pre class="wp-block-preformatted">Air Tickets:
+[
+    ("J", "A"),
+    ("A", "D"),
+    ("A", "B"),
+    ("B", "C"),
+    ("C", "A"),
+    ("C", "E"),
+    ("E", "C")
+]
+
+Itinerary:
+['J', 'A', 'B', 'C', 'E', 'C', 'A', 'D']</pre>
+
+
+						<h3 style="text-align: center;margin: 0 auto; font-family: 'Merriweather', serif;">Solution</h3>
+
+						<br>
+						<br>
+
+						<p>More technically speaking we have to find out a path that covers all the nodes and traverses every edge exactly once. Luckily this is a standard problem called as finding the "Euler Circuit".<br>It's guaranteed in the question that there is an Euler Circuit present as the trips are from an actual itinerary followed by someone.<br> <br>We can observer the fact that if there were no cycles in the graph, we could've done a simple traversal to get the path followed.<br><br><strong>Algorithm Overview:</strong><br>1. Start with the city J.<br>2. Get the lexicographically smallest city that we can go from J.<br>3. From our next city also repeat the steps till we reach a dead end and keep adding these nodes in a stack.<br>4. By dead end we mean, we can't go anywhere from this city and is possibly the end destination.<br>5. This is what the main path will look like. If there are still unvisited nodes, they form cycles around these nodes only.<br>6. Pop the stack and put the node in the routes list, we are going to build the route in reverse order. This node is fully explored and has no outgoing edges.<br>7. Loop until the stack is empty, get the top of the stack and take the next smallest possible node and repeat the same procedure.</p>
+						<br>
+						<br>
+
+						<div>
+							<script src="https://gist.github.com/priyankvex/373843c204336a0100a9798e8c706e74.js"></script>
+						</div>
+
+					</div>
+				</div>
+
+		</div>
+	</div>
+
+<script src='js/app.min.js'></script>
+</body>
+</html>
